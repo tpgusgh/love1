@@ -1,0 +1,32 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 19, in script
+    show q1 at align
+  File "game/script.rpy", line 19, in <module>
+    show q1 at align
+NameError: name 'align' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 19, in script
+    show q1 at align
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 1111, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 1070, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 1070, in <listcomp>
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 19, in <module>
+    show q1 at align
+NameError: name 'align' is not defined
+
+macOS-15.0.1-arm64-arm-64bit arm64
+Ren'Py 8.3.2.24090902
+Doki Doki BSSM 1.0
+Mon Oct 28 00:34:47 2024
