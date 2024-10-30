@@ -45,7 +45,8 @@ label start:
             hide q1
 
             show ujin at Transform(xalign=0.2, yalign=0.5)
-            u "얘들아 폰내라"
+            u "자 얘들아" 
+            u "Q&A시간이다 !" with vpunch
         
         "iostream":
             u "dd"
@@ -63,3 +64,4 @@ label start:
 
     
     return
+

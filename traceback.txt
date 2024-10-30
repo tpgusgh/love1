@@ -1,24 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 48, in script
-    e "dd"
-Exception: Sayer 'e' is not defined.
+  File "game/script.rpy", line 85, in script
+    if renpy.mouse.is_pressed() or renpy.keymap.get("K_ANY"):
+  File "game/script.rpy", line 85, in <module>
+    if renpy.mouse.is_pressed() or renpy.keymap.get("K_ANY"):
+AttributeError: module 'renpy.exports' has no attribute 'mouse'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 48, in script
-    e "dd"
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 2573, in execute
-    Say.execute(self)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 575, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 464, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'e' is not defined.
+  File "game/script.rpy", line 85, in script
+    if renpy.mouse.is_pressed() or renpy.keymap.get("K_ANY"):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/ast.py", line 1843, in execute
+    if renpy.python.py_eval(condition):
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "/Volumes/renpy-8.3.2-sdk/renpy-8.3.2-sdk/renpy/python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 85, in <module>
+    if renpy.mouse.is_pressed() or renpy.keymap.get("K_ANY"):
+AttributeError: module 'renpy.exports' has no attribute 'mouse'
 
 macOS-15.0.1-arm64-arm-64bit arm64
 Ren'Py 8.3.2.24090902
 Doki Doki BSSM 1.0
-Mon Oct 28 09:37:33 2024
+Tue Oct 29 09:02:09 2024
